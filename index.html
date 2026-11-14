@@ -6,9 +6,9 @@
     <title>Mijn Woonplaats - Schoonrewoerd</title>
     
     <!-- Extern lettertype via Google Fonts -->
-    <link rel="preconnect" href="https://googleapis.com">
-    <link rel="preconnect" href="https://gstatic.com" crossorigin>
-    <link href="https://googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
 
     <style>
         /* Algemene instellingen */
@@ -23,11 +23,10 @@
             background-color: #f4f4f4;
         }
 
-        /* Header met achtergrondafbeelding en extern lettertype */
+        /* Header met donkerblauwe achtergrond en extern lettertype */
         header {
-            background-image: url('schoonrewoerd-header.jpg'); /* Vervang door een foto van Schoonrewoerd */
-            background-size: cover;
-            background-position: center;
+            position: relative;
+            background-color: #003893;
             color: white;
             text-align: center;
             padding: 60px 20px;
@@ -36,8 +35,33 @@
 
         header h1 {
             font-family: 'Montserrat', sans-serif;
-            font-size: 2.5em;
+            font-size: 1.6em;
             margin: 0;
+        }
+
+        /* Vlag van Schoonrewoerd links en rechts met witte rand */
+        header::before,
+        header::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 85px;
+            aspect-ratio: 3 / 2;
+            background-image: url('afbeeldingen/Schoonrewoerd_vlag.png');
+            background-size: cover;
+            background-position: center;
+            border: 2px solid #ffffff;
+            border-radius: 3px;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
+        }
+
+        header::before {
+            left: 20px;
+        }
+
+        header::after {
+            right: 20px;
         }
 
         /* Mobile First: standaard zijn alle kolommen 100% breed */
@@ -57,6 +81,10 @@
         @media only screen and (min-width: 768px) {
             .col-2 { width: 16.66%; }
             .col-9 { width: 75%; }
+
+            header h1 {
+                font-size: 2.5em;
+            }
         }
 
         /* Linkerdeel (feitjes) */
