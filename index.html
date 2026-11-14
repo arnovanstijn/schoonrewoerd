@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mijn Woonplaats - Schoonrewoerd</title>
+    
+    <!-- Extern lettertype via Google Fonts -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
+
+    <style>
+        /* Algemene instellingen */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        /* Header met achtergrondafbeelding en extern lettertype */
+        header {
+            background-image: url('schoonrewoerd-header.jpg'); /* Vervang door een foto van Schoonrewoerd */
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        header h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5em;
+            margin: 0;
+        }
+
+        /* Mobile First: standaard zijn alle kolommen 100% breed */
+        [class*="col-"] {
+            width: 100%;
+            float: left;
+            padding: 15px;
+        }
+
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        /* Mediaquery voor middelgrote en grote schermen (vanaf 768px) */
+        @media only screen and (min-width: 768px) {
+            .col-2 { width: 16.66%; }
+            .col-9 { width: 75%; }
+        }
+
+        /* Linkerdeel (feitjes) */
+        .feitjes {
+            background-color: #ffffff;
+        }
+
+        /* Rechterdeel (andere achtergrondkleur) */
+        .attracties {
+            background-color: #e8f5e9;
+        }
+
+        /* Artikelen en afbeeldingen rechts van de tekst */
+        .attractie-blok {
+            background-color: #ffffff;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            overflow: auto;
+        }
+
+        .attractie-blok img {
+            float: right;
+            width: 150px;
+            height: auto;
+            margin-left: 15px;
+            border-radius: 4px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Schoonrewoerd</h1>
+    </header>
+
+    <main class="row">
+        <!-- Linkerdeel: 2 kolommen met vijf feitjes -->
+        <section class="col-2 feitjes">
+            <h2>Vijf feitjes</h2>
+            <ul>
+                <li>Schoonrewoerd werd rond het jaar 1023 gesticht door Jan van Arkel.</li>
+                <li>Het dorp ligt in de gemeente Vijfheerenlanden, tussen Leerdam en Zijderveld.</li>
+                <li>Er wonen ongeveer 1.700 inwoners in dit groene dorp.</li>
+                <li>Hier ligt het grootste doorbraakwiel van heel Nederland.</li>
+                <li>De koek 'Jan Hagel' is een bekende streeklekkernij uit het dorp.</li>
+            </ul>
+        </section>
+
+        <!-- Rechterdeel: 9 kolommen en andere achtergrondkleur -->
+        <section class="col-9 attracties">
+            <h2>Toeristische attracties</h2>
+            
+            <div class="attractie-blok">
+                <article>
+                    <img src="afbeeldingen/Het Schoonrewoerde Wiel.png" alt="Het Schoonrewoerdse Wiel">
+                    <h3>Het Schoonrewoerdse Wiel</h3>
+                    <p>Het Schoonrewoerdse Wiel, ook wel de Wiel van Bassa genoemd, is ontstaan na een zware dijkdoorbraak in 1573. Met een oppervlakte van ruim dertien hectare is het het grootste wiel van Nederland. Om het water loopt een prachtige wandelroute langs oude hoogstamfruitboomgaarden en historische boerderijen.</p>
+                </article>
+            </div>
+
+            <div class="attractie-blok">
+                <article>
+                    <img src="afbeeldingen/diegdijk.png" alt="De Diefdijk bij Schoonrewoerd">
+                    <h3>De Diefdijk en De Schaapskooi</h3>
+                    <p>Vlak bij het dorp ligt de eeuwenoude Diefdijk uit 1284, die vroeger onderdeel was van de Nieuwe Hollandse Waterlinie om de polders tegen water te beschermen. Vanuit natuurcentrum De Schaapskooi net buiten Schoonrewoerd kun je mooie fiets- en wandeltochten maken door het polderlandschap.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 - Schoonrewoerd</p>
+    </footer>
+
+</body>
+</html>
